@@ -8,26 +8,30 @@ module.exports = {
     {{#needCacher}}
     cacher: '{{cacher}}',
     {{/needCacher}}
+    middlewares: null,
     requestTimeout: 0 * 1000,
-    requestRetry: 0,
-    maxCallLevel: 0,
     heartbeatInterval: 5000,
     heartbeatTimeout: 1500,
-    disableBalancer: false,
-    registry: {
-        strategy: 'RoundRobin',
-        preferLocal: true
-    },
+    loadBalancingStrategy: 'round_robin',
     circuitBreaker: {
         enabled: false,
         maxFailures: 3,
-        halfOpenTime: 10000,
+        halfOpenTimeout: 10000,
         failureOnTimeout: true,
-        failureOnReject: true
+        failureOnError: true
     },
     validation: true,
-    metrics: false,
+    metrics: {
+        enabled: false,
+        metricRate: 1.0
+    },
+    retryPolicy: {
+        enabled: false,
+        retries: 5,
+        delay: 3000
+    },
     metricsRate: 1,
     internalActions: true,
+    internalActionsAccessable: false,
     watchServices: false
 }
