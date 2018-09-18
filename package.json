@@ -1,0 +1,16 @@
+{
+  "name": "weave-template-project",
+  "version": "1.0.0",
+  "description": "Project template for weave microservice framework.",
+  "main": "meta.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fachw3rk/weave-cli-template-project.git"
+  },
+  "author": "Weave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fachw3rk/weave-cli-template-project/issues"
+  },
+  "homepage": "https://github.com/fachw3rk/weave-cli-template-project#readme"
+}
