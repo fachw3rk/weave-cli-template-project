@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My Weave project",
   "scripts": {
-    "dev": "weave-runner --repl --hot services",
+    "dev": "weave-runner --repl --watch services",
     "start": "weave-runner services"{{#jest}},
     "ci": "jest --watch",
     "test": "jest --coverage"{{/jest}}{{#lint}},
