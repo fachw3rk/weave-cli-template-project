@@ -1,17 +1,17 @@
 module.exports = {
     name: 'buttler',
     settings: {},
-    // dependencies: [],	
+    // dependencies: [],
     actions: {
         sayHello () {
-            return 'Hello from Weave';
+            return 'Hello from Weave'
         },
         welcome: {
             params: {
                 name: 'string'
             },
             handler (ctx) {
-                return `Welcome, ${ctx.params.name}`;
+                return `Welcome, ${ctx.params.name}`
             }
         }
     },
@@ -30,4 +30,4 @@ module.exports = {
     stopped () {
 
     }
-};
+}

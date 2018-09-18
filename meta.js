@@ -6,18 +6,20 @@ module.exports = function(values) {
 			{
 				type: 'confirm',
 				name: 'needTransporter',
-				message: 'Do you want to realize a distributed system?',
+				message: 'Do you want to connect several nodes with each other?',
 				default: false
 			},
 			{
 				type: 'list',
 				name: 'transporter',
-				message: 'Select a transporter',
+				message: 'Select a transport adapter',
 				choices: [
-					{ name: 'NATS (recommended)', value: 'NATS' },
-					{ name: 'Redis', value: 'Redis' }
+					{ name: 'Redis (recommended)', value: 'Redis' },
+					{ name: 'NATS', value: 'NATS' }
 				],
-				when(answers) { return answers.needTransporter; },
+				when (answers) {
+					return answers.needTransporter
+				},
 				default: 'Redis'
 			},
 			{
@@ -34,7 +36,9 @@ module.exports = function(values) {
 					{ name: 'Memory', value: 'Memory' },
 					{ name: 'Redis', value: 'Redis' }
 				],
-				when(answers) { return answers.needCacher; },
+				when (answers) {
+					return answers.needCacher
+				},
 				default: 'Memory'
 			},
 			{

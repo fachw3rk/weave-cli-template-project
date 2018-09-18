@@ -7,9 +7,10 @@ module.exports = {
         port: process.env.PORT || 3000,
         routes: [{
             path: '/',
-            whitelist: [
-                'greeter.*'
-            ]
+            aliases: {
+                'GET /say-hello': 'buttler.sayHello', // Call "http://localhost:3000/say-hello" in your browser
+                'GET /welcome/:name': 'buttler.welcome' // Call "http://localhost:3000/welcome/John" in your browser
+            }
         }]
     }
 }

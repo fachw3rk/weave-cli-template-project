@@ -9,7 +9,7 @@
 			"type": "node",
 			"request": "launch",
 			"name": "Debug",
-			"program": "${workspaceRoot}/node_modules/@weave-js/core/bin/weave-runner.js",
+			"program": "${workspaceRoot}/node_modules/@weave-js/core/bin/runner.js",
 			"args": [
 				"services"
 			]

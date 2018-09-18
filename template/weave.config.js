@@ -1,6 +1,6 @@
 module.exports = {
-    namespace: 'dev',
-    nodeID: 'my-first-node',
+    // namespace: 'dev',
+    nodeId: 'my-first-node',
     logLevel: 'info',
     {{#needTransporter}}
     transporter: '{{transporter}}',
@@ -29,5 +29,5 @@ module.exports = {
     metrics: false,
     metricsRate: 1,
     internalActions: true,
-    hotReload: false
+    watchServices: false
 }
