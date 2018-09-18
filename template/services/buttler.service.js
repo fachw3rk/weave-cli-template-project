@@ -1,80 +1,33 @@
 module.exports = {
-	/**
-	 * Service name
-	 */
-	name: 'buttler',
-	/**
-	 * Service settings
-	 */
-	settings: {
+    name: 'buttler',
+    settings: {},
+    // dependencies: [],	
+    actions: {
+        sayHello () {
+            return 'Hello from Weave';
+        },
+        welcome: {
+            params: {
+                name: 'string'
+            },
+            handler (ctx) {
+                return `Welcome, ${ctx.params.name}`;
+            }
+        }
+    },
+    events: {
 
-	},
-	/**
-	 * Service dependencies
-	 */
-	//dependencies: [],	
+    },
+    methods: {
 
-	/**
-	 * Actions
-	 */
-	actions: {
+    },
+    created () {
 
-		/**
-		 * Say a 'Hello'
-		 *
-		 * @returns
-		 */
-		sayHello() {
-			return 'Hello from Weave';
-		},
+    },
+    started () {
 
-		/**
-		 * Welcome a username
-		 *
-		 * @param {String} name - User name
-		 */
-		welcome: {
-			params: {
-				name: 'string'
-			},
-			handler(ctx) {
-				return `Welcome, ${ctx.params.name}`;
-			}
-		}
-	},
+    },
+    stopped () {
 
-	/**
-	 * Events
-	 */
-	events: {
-
-	},
-
-	/**
-	 * Methods
-	 */
-	methods: {
-
-	},
-
-	/**
-	 * Service created lifecycle event handler
-	 */
-	created() {
-
-	},
-
-	/**
-	 * Service started lifecycle event handler
-	 */
-	started() {
-
-	},
-
-	/**
-	 * Service stopped lifecycle event handler
-	 */
-	stopped() {
-
-	}
+    }
 };

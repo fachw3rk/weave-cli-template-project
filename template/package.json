@@ -1,54 +1,54 @@
 {
-  "name": "{{projectName}}",
-  "version": "1.0.0",
-  "description": "My Weave project",
-  "scripts": {
-    "dev": "weave-runner --repl --watch services",
-    "start": "weave-runner services"{{#jest}},
-    "ci": "jest --watch",
-    "test": "jest --coverage"{{/jest}}{{#lint}},
-    "lint": "eslint services"{{/lint}}
-  },
-  "keywords": [
-    "microservices",
-    "weave",
-    "framework"
-  ],
-  "author": "",
-  "devDependencies": {
-    {{#lint}}
-    "eslint": "^4.15.0",
-    "eslint-config-fw": "^1.0.1",
-    {{/lint}}
-    {{#jest}}
-    "jest": "^22.0.4",
-    "jest-cli": "^22.0.4",
-    {{/jest}}
-    "@weave-js/repl": "^0.0.4"
-  },
-  "dependencies": {
-    {{#webGateway}}
-    "@weave-js/web": "^0.4.0-rc.9",
-    {{/webGateway}}
-    {{#if_eq transporter "NATS"}}
-    "nats": "^1.0.1",
-    {{/if_eq}}
-    {{#if_eq transporter "Redis"}}
-    "ioredis": "^4.0.0",
-    {{/if_eq}}
-    {{#if_eq cacher "Redis"}}
-    "ioredis": "^4.0.0",
-    {{/if_eq}}
-    "@weave-js/core": "^0.5.0-rc.7"
-  },
-  "engines": {
-    "node": ">= 6.x.x"
-  }{{#jest}},
-  "jest": {
-    "testEnvironment": "node",
-    "rootDir": "./services",
-    "roots": [
-      "../test"
-    ]
-  }{{/jest}}
+    "name": "{{projectName}}",
+    "version": "1.0.0",
+    "description": "My Weave project",
+    "scripts": {
+        "dev": "weave-runner --repl --watch services",
+        "start": "weave-runner services"{{#jest}},
+        "ci": "jest --watch",
+        "test": "jest --coverage"{{/jest}}{{#lint}},
+        "lint": "eslint services"{{/lint}}
+    },
+    "keywords": [
+        "microservices",
+        "weave",
+        "framework"
+    ],
+    "author": "",
+    "devDependencies": {
+        {{#lint}}
+        "eslint": "^4.15.0",
+        "eslint-config-fw": "^1.0.1",
+        {{/lint}}
+        {{#jest}}
+        "jest": "^22.0.4",
+        "jest-cli": "^22.0.4",
+        {{/jest}}
+        "@weave-js/repl": "^0.0.4"
+    },
+    "dependencies": {
+        {{#webGateway}}
+        "@weave-js/web": "^0.4.0-rc.10",
+        {{/webGateway}}
+        {{#if_eq transporter "NATS"}}
+        "nats": "^1.0.1",
+        {{/if_eq}}
+        {{#if_eq transporter "Redis"}}
+        "ioredis": "^4.0.0",
+        {{/if_eq}}
+        {{#if_eq cacher "Redis"}}
+        "ioredis": "^4.0.0",
+        {{/if_eq}}
+        "@weave-js/core": "^0.5.0-rc.7"
+    },
+    "engines": {
+        "node": ">= 6.x.x"
+    }{{#jest}},
+    "jest": {
+        "testEnvironment": "node",
+        "rootDir": "./services",
+        "roots": [
+        "../test"
+        ]
+    }{{/jest}}
 }
