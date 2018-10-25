@@ -30,8 +30,8 @@ module.exports = function(values) {
 			},
 			{
 				type: 'list',
-				name: 'cacher',
-				message: 'Select a cacher solution',
+				name: 'cache',
+				message: 'Select a caching solution',
 				choices: [
 					{ name: 'Memory', value: 'Memory' },
 					{ name: 'Redis', value: 'Redis' }

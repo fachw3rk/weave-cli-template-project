@@ -5,9 +5,9 @@ module.exports = {
     {{#needTransporter}}
     transporter: '{{transporter}}',
     {{/needTransporter}}
-    {{#needCacher}}
-    cacher: '{{cacher}}',
-    {{/needCacher}}
+    {{#needCaching}}
+    cache: '{{cache}}',
+    {{/needCaching}}
     middlewares: null,
     requestTimeout: 0 * 1000,
     heartbeatInterval: 5000,
