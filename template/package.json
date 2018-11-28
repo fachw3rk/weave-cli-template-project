@@ -39,7 +39,7 @@
         {{#if_eq cache "Redis"}}
         "ioredis": "^4.0.0",
         {{/if_eq}}
-        "@weave-js/core": "^0.5.14"
+        "@weave-js/core": "^0.5.20"
     },
     "engines": {
         "node": ">= 6.x.x"

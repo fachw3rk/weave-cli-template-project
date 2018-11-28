@@ -24,8 +24,8 @@ module.exports = function(values) {
 			},
 			{
 				type: 'confirm',
-				name: 'needCacher',
-				message: 'Would you like to use cache?',
+				name: 'needCaching',
+				message: 'Would you like to use caching?',
 				default: false
 			},
 			{
@@ -37,7 +37,7 @@ module.exports = function(values) {
 					{ name: 'Redis', value: 'Redis' }
 				],
 				when (answers) {
-					return answers.needCacher
+					return answers.needCaching
 				},
 				default: 'Memory'
 			},
