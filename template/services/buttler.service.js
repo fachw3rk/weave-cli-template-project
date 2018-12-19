@@ -10,8 +10,8 @@ module.exports = {
             params: {
                 name: 'string'
             },
-            handler (ctx) {
-                return `Welcome, ${ctx.params.name}`
+            handler (context) {
+                return `Welcome, ${context.params.name}`
             }
         }
     },

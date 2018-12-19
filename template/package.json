@@ -17,21 +17,21 @@
     "author": "",
     "devDependencies": {
         {{#lint}}
-        "eslint": "^4.15.0",
-        "eslint-config-fw": "^1.0.1",
+        "eslint": "^5.10.0",
+        "eslint-config-fw": "^1.0.3",
         {{/lint}}
         {{#jest}}
         "jest": "^23.6.0",
         "jest-cli": "^23.6.0",
         {{/jest}}
-        "@weave-js/repl": "^0.0.16"
+        "@weave-js/repl": "^0.0.34"
     },
     "dependencies": {
         {{#webGateway}}
-        "@weave-js/web": "^0.4.10",
+        "@weave-js/web": "^0.4.16",
         {{/webGateway}}
         {{#if_eq transporter "NATS"}}
-        "nats": "^1.0.1",
+        "nats": "^1.2.2",
         {{/if_eq}}
         {{#if_eq transporter "Redis"}}
         "ioredis": "^4.0.0",
@@ -39,7 +39,7 @@
         {{#if_eq cache "Redis"}}
         "ioredis": "^4.0.0",
         {{/if_eq}}
-        "@weave-js/core": "^0.5.20"
+        "@weave-js/core": "^0.5.31"
     },
     "engines": {
         "node": ">= 6.x.x"
