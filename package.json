@@ -1,6 +1,6 @@
 {
   "name": "weave-template-project",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Project template for weave microservice framework.",
   "main": "meta.js",
   "repository": {
